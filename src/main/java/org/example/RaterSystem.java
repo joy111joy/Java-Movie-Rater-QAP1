@@ -10,8 +10,8 @@ public class RaterSystem {
         users = new HashMap<>();
         movies = new HashMap<>();
         //starting movies
-        movies.put("Inception", new Movie("Inception", "Sci-Fi", 8.8));
-        movies.put("Titanic", new Movie("Titanic", "Romance", 7.8));
+        movies.put("Inception", new Movie("Inception", "Sci-Fi"));
+        movies.put("Titanic", new Movie("Titanic", "Romance"));
     }
 
     public void addUser(String userName) {
@@ -31,6 +31,10 @@ public class RaterSystem {
         return movies.get(movieName);
     }
 
+
+    public HashMap<String, User> getUsers() {
+        return users;
+    }
     //show movies list
     //show users list *Possibly*
 }

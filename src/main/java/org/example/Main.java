@@ -1,10 +1,12 @@
 package org.example;
 import java.util.Scanner;
+import java.util.HashMap;
 
 
 public class Main {
     public static void main(String[] args) {
 
+        RaterSystem raterSystem = new RaterSystem();
         Scanner input = new Scanner(System.in); // Initialize the scanner outside the loop
         boolean running = true; // To control the loop
 
@@ -13,7 +15,8 @@ public class Main {
             System.out.println("1. Add User");
             System.out.println("2. Rate Movie");
             System.out.println("3. Show User's Rated Movies");
-            System.out.println("4. Quit");
+            System.out.println("4. Show User List");
+            System.out.println("5. Exit");
             int optionChoice = input.nextInt(); // Get the user's choice
 
             switch (optionChoice) {
@@ -21,7 +24,7 @@ public class Main {
                     // Option 1: Add User
                     System.out.println("Please enter a user name:");
                     String userName = input.next();
-                    // Logic to add user
+                    raterSystem.addUser(userName);
                     System.out.println("User Created: " + userName);
                     break;
 
@@ -29,7 +32,9 @@ public class Main {
                         // Option 2: Rate Movie
                         System.out.println("Please enter your username:");
                         String userRateName = input.next();
-                        // Logic to rate a movie
+
+
+
                         System.out.println("Movie Rated by " + userRateName + "!");
                         break;
 
@@ -42,6 +47,18 @@ public class Main {
                             break;
 
                         case 4:
+                            HashMap<String, User> users = raterSystem.getUsers();
+
+                            if (users.isEmpty()) {
+                                System.out.println("No users found.");
+                            } else {
+                                System.out.println("List of users:");
+                                for (String user : users.keySet()) {
+                                    System.out.println(user);
+                                }
+                            }
+                            break;
+                        case 5:
                             // Option 4: Quit
                             running = false; // Set running to false to exit the loop
                             System.out.println("Exiting the program.");
