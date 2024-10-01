@@ -12,7 +12,7 @@ public class Main {
             System.out.println("Please enter an option:");
             System.out.println("1. Add User");
             System.out.println("2. Rate Movie");
-            System.out.println("3. Show Rated Movies");
+            System.out.println("3. Show User's Rated Movies");
             System.out.println("4. Quit");
             int optionChoice = input.nextInt(); // Get the user's choice
 
