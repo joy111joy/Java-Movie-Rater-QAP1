@@ -17,7 +17,7 @@ public class Main {
             System.out.println("3. Show User's Rated Movies");
             System.out.println("4. Show User List");
             System.out.println("5. Show Movie List");
-            System.out.println("6. Exit");
+            System.out.println("6. Exit the Menu");
 
             // Check if input is an integer before calling nextInt()
             if (input.hasNextInt()) {
