@@ -6,10 +6,11 @@ public class RaterSystem {
     private HashMap<String, User> users;
     private HashMap<String, Movie> movies;
 
+    //constructor
     public RaterSystem() {
         users = new HashMap<>();
         movies = new HashMap<>();
-        //starting movies
+        //starting movies in system
         movies.put("Inception", new Movie("Inception", "Sci-Fi"));
         movies.put("Titanic", new Movie("Titanic", "Romance"));
         movies.put("The Matrix", new Movie("The Matrix", "Sci-Fi"));
@@ -30,6 +31,7 @@ public class RaterSystem {
 
     }
 
+    //method to add user to the system
     public void addUser(String userName) {
         if (!users.containsKey(userName)) {
             users.put(userName, new User(userName));
@@ -39,6 +41,7 @@ public class RaterSystem {
         }
     }
 
+    //method to add movie to the system
     public void addMovie(String movieName, String genre) {
         if (!movies.containsKey(movieName)) {
             movies.put(movieName, new Movie(movieName, genre));
@@ -50,6 +53,7 @@ public class RaterSystem {
 
     }
 
+    //getters
     public User getUser(String userName) {
         return users.get(userName);
     }
