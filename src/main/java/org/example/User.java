@@ -14,7 +14,7 @@ public class User {
         ratedList.put(movie, rating);
     }
 
-    public HashMap<Movie, Double> getRatedList(HashMap<Movie, Double> ratedList) {
+    public HashMap<Movie, Double> getRatedList() {
         return ratedList;
     }
 
