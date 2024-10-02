@@ -13,12 +13,20 @@ public class User {
 
     //method for user to rate movie and add it to their list of rated movies
     public void rate(Movie movie, double rating) {
-        ratedList.put(movie, rating);
+        if (rating > 10 || rating < 1) {
+            System.out.println("Rating must be between 1 and 10.");
+        } else {
+            ratedList.put(movie, rating);
+        }
     }
 
     //getter
     public HashMap<Movie, Double> getRatedList() {
         return ratedList;
+    }
+
+    public String getName() {
+        return username;
     }
 
 
