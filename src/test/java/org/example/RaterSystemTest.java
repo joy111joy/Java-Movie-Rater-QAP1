@@ -2,11 +2,11 @@ package org.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class RaterSystemTest {
+public class RaterSystemTest {
 
     //Test to add user to the system
     @Test
-    void testAddUser() {
+    public void testAddUser() {
         RaterSystem raterSystem = new RaterSystem();
         raterSystem.addUser("John");
 
@@ -17,7 +17,7 @@ class RaterSystemTest {
 
     //test adding an existing user to the sstem
     @Test
-    void testAddExistingUser() {
+    public void testAddExistingUser() {
         RaterSystem raterSystem = new RaterSystem();
         raterSystem.addUser("Alice");
 
@@ -30,7 +30,7 @@ class RaterSystemTest {
 
     //test rating movie
     @Test
-    void testRateMovie() {
+    public void testRateMovie() {
         RaterSystem raterSystem = new RaterSystem();
         User user = new User("Bob");
         Movie movie = new Movie("Inception", "Sci-Fi");
@@ -45,7 +45,7 @@ class RaterSystemTest {
 
     //test invalid ratings
     @Test
-    void testInvalidRating() {
+    public void testInvalidRating() {
         RaterSystem raterSystem = new RaterSystem();
         User user = new User("Bob");
         Movie movie = new Movie("Inception", "Sci-Fi");
@@ -59,7 +59,7 @@ class RaterSystemTest {
 
     //check if user finds users
     @Test
-    void testGetUserList() {
+    public void testGetUserList() {
         RaterSystem raterSystem = new RaterSystem();
         raterSystem.addUser("Alice");
         raterSystem.addUser("Bob");
@@ -72,7 +72,7 @@ class RaterSystemTest {
 
     //Check if user list is empty
     @Test
-    void testEmptyUserList() {
+    public void testEmptyUserList() {
         RaterSystem raterSystem = new RaterSystem();
 
         // Ensure that the user list is empty
@@ -81,7 +81,7 @@ class RaterSystemTest {
 
     //Check if movie list contains movies
     @Test
-    void testGetMovieList() {
+    public void testGetMovieList() {
         RaterSystem raterSystem = new RaterSystem();
         raterSystem.addMovie("Deadpool", "Action");
         raterSystem.addMovie("Martian", "Sci-Fi");
